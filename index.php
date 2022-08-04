@@ -1,10 +1,7 @@
 <?php
 include 'vendor/autoload.php';
 
-$dotenv = \Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
-
-$dsn = $_ENV['DSN'] ?? 'https://e5c3126aacd44fa2b87b2a363b2bc27f@o1243391.ingest.sentry.io/6398682';
+$dsn = 'https://e5c3126aacd44fa2b87b2a363b2bc27f@o1243391.ingest.sentry.io/6398682';
 \Sentry\init([
     'dsn' => $dsn,
     'traces_sample_rate' => 0.5
